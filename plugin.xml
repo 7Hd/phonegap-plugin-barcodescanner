@@ -62,10 +62,8 @@
         </intent-filter>
       </activity>
     </config-file>
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="android.permission.CAMERA"/>
-      <uses-permission android:name="android.permission.FLASHLIGHT"/>
-      <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <config-file target="AndroidManifest.xml" parent="/manifest">   
+      <uses-permission android:name="android.permission.FLASHLIGHT"/>     
     </config-file>
     <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
     <resource-file src="src/android/barcodescanner-release-2.0.1.aar" target="libs/barcodescanner.aar"/>
@@ -121,10 +119,7 @@
       <feature name="BarcodeScanner">
         <param name="blackberry-package" value="phonegap-plugin-barcodescanner"/>
       </feature>
-    </config-file>
-    <config-file target="www/config.xml" parent="/widget/rim:permissions">
-      <rim:permit>use_camera</rim:permit>
-    </config-file>
+    </config-file>   
     <dependency id="cordova-plugin-bb-app"/>
   </platform>
 </plugin>
